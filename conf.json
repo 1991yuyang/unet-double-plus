@@ -1,0 +1,39 @@
+{
+  "train": {
+    "img_size": 704,
+    "epoch": 200,
+    "batch_size": 2,
+    "init_lr": 0.001,
+    "final_lr": 0.0000001,
+    "weight_decay": 0.0005,
+    "CUDA_VISIBLE_DEVICES": "0,1",
+    "num_classes": 2,
+    "is_deconv": true,
+    "downsample_use_pool": true,
+    "print_every_step": 2,
+    "decoder1_to_4_loss_weights": [1, 1, 1, 1],
+    "avg_result_loss_weight": 1,
+    "save_model_depend_on_iou": true,
+    "ce_loss_weight": 1,
+    "dice_loss_weight": 1,
+    "data_root_dir": "/home/guest/yuyang/data/wielding_seams_data",
+    "backbone_type": "resnet34",
+    "img_suffix": "jpg",
+    "label_is_json_format": false,
+    "num_workers": 4,
+    "is_deep_sup": true
+  },
+  "predict": {
+    "data_dir": "/home/guest/yuyang/data/wielding_seams_data/train_img",
+    "img_suffix": "jpg",
+    "img_size": 704,
+    "use_best_model": true,
+    "num_classes": 2,
+    "backbone_type": "resnet34",
+    "is_deconv": true,
+    "downsample_use_pool": true,
+    "is_deep_sup": true,
+    "show_result": false,
+    "save_result": true
+  }
+}
